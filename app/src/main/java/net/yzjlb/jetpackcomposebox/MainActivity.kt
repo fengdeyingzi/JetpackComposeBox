@@ -31,8 +31,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
-import net.yzjlb.jetpackcomposebox.ui.screen.TextFieldScreen
-import net.yzjlb.jetpackcomposebox.ui.screen.TextScreen
+import net.yzjlb.jetpackcomposebox.ui.screen.*
 import net.yzjlb.jetpackcomposebox.ui.theme.JetpackComposeBoxTheme
 
 class MainActivity : ComponentActivity() {
@@ -71,6 +70,33 @@ fun Greeting() {
         composable("TextFieldScreen") {
             TextFieldScreen()
         }
+        composable("RowScreen") {
+            RowScreen()
+        }
+        composable("ColumnScreen") {
+            ColumnScreen()
+        }
+        composable("ButtonScreen") {
+            ButtonScreen()
+        }
+        composable("CardScreen") {
+            CardScreen()
+        }
+        composable("SwitchScreen") {
+            SwitchScreen()
+        }
+        composable("DialogScreen") {
+            DialogScreen()
+        }
+        composable("CanvasScreen") {
+            CanvasScreen()
+        }
+        composable("ImageScreen") {
+            ImageScreen()
+        }
+
+
+
     }
 
 
@@ -142,16 +168,16 @@ fun mainScreen() {
                     navController!!.navigate("TextFieldScreen")
                 })
                 mainListItem(text = "Row", info = "横向布局(可滚动)", onClick = {
-
+                    navController!!.navigate("RowScreen")
                 })
                 mainListItem(text = "Column", info = "纵向布局(可滚动)", onClick = {
-
+                    navController!!.navigate("ColumnScreen")
                 })
                 mainListItem(text = "Image", info = "图片控件", onClick = {
-
+                    navController!!.navigate("ImageScreen")
                 })
                 mainListItem(text = "Button", info = "按钮控件", onClick = {
-
+                    navController!!.navigate("ButtonScreen")
                 })
                 mainListItem(text = "Stack", info = "层布局", onClick = {
 
@@ -160,19 +186,25 @@ fun mainScreen() {
 
                 })
                 mainListItem(text = "Card", info = "卡片布局", onClick = {
-
+                    navController!!.navigate("CardScreen")
                 })
                 mainListItem(text = "Shade", info = "阴影", onClick = {
 
                 })
                 mainListItem(text = "Switch", info = "切换控件", onClick = {
-
+                    navController!!.navigate("SwitchScreen")
                 })
                 mainListItem(text = "Dialog", info = "对话框", onClick = {
-
+                    navController!!.navigate("DialogScreen")
                 })
                 mainListItem(text = "AppBar", info = "应用标题", onClick = {
 
+                })
+                mainListItem(text = "Canvas", info = "画布", onClick = {
+                    navController!!.navigate("CanvasScreen")
+                })
+                mainListItem(text = "Icon", info = "图标", onClick = {
+                    navController!!.navigate("IconScreen")
                 })
                 Box(modifier = Modifier.height(100.dp)) {
                     
