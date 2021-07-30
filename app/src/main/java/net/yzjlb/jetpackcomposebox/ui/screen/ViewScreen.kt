@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.compose.navigate
 import net.yzjlb.jetpackcomposebox.R
 import net.yzjlb.jetpackcomposebox.TopAppBarDemo
 import net.yzjlb.jetpackcomposebox.navController

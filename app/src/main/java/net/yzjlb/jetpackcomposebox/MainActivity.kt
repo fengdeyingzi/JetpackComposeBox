@@ -29,7 +29,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
 import net.yzjlb.jetpackcomposebox.ui.screen.*
 import net.yzjlb.jetpackcomposebox.ui.theme.JetpackComposeBoxTheme
@@ -159,7 +158,7 @@ fun mainScreen() {
                             name.value = "风的影子"
                         }
                         .padding(8.dp)) {
-                    Text(text = "你好! ${name.value},这是一个学习Jetpack Compose组件的APP,希望它可以给你带来帮助!")
+                    Text(text = "你好! ${name.value},这是一个学习Jetpack Compose组件的APP,希望它可以给你带来帮助!\nhttps://github.com/fengdeyingzi/JetpackComposeBox")
                 }
                 mainListItem(text = "Text", info = "基础文本控件", onClick = {
                     navController!!.navigate("TextScreen")
