@@ -5,9 +5,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.materialIcon
+import androidx.compose.material.icons.materialPath
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
@@ -35,16 +35,17 @@ fun ViewScreen(view: @Composable ColumnScope.() -> Unit,title:String = "JetpackC
                     }
                 },
                 actions = {
-//                    IconButton(onClick = { }) {
-//                        Icon(Icons.Filled.Share, null)
-//                    }
-//                    IconButton(onClick = { }) {
-//                        Icon(Icons.Filled.Settings, null)
-//                    }
+                    IconButton(onClick = { }) {
+                        Icon(painter = painterResource(id = R.drawable.code),
+                            contentDescription = null)
+                    }
+                    IconButton(onClick = { }) {
+                        Icon(Icons.Filled.Info, null)
+                    }
                 }
             )
         }) {
-            Column(modifier = Modifier.height(120.dp),content = view)
+            Column(modifier = Modifier.height(240.dp),content = view)
             Column(modifier = Modifier
                 .padding(start = 8.dp, top = 128.dp, end = 8.dp, bottom = 8.dp)
                 .fillMaxHeight(),content = content)
